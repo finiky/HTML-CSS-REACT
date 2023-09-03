@@ -212,3 +212,35 @@
 // compareIntegers([1,20,551,4,201,800]);
 
 // // JavaScript program to find the number appearing most frequently in a given array of integers.
+// const integerCount = (integers) => {
+//   const records = [];
+//   const counts = [];
+//   let position = false
+//   for (let i = 0; i < integers.length; i++, position = false) {
+//     for (let j = 0; j < records.length; j++) {
+//       if (integers[i] === records[j]) {
+//         counts[j] = counts[j] + 1; // increment the count
+//         position = true; // record the position
+//         j = records.length; // break the inner loop if the integer is found
+//       }
+//     }
+//     if (position === false) {
+//       records.push(integers[i]); // add the integer to the array for the first time
+//       counts.push(1); // increment the count to 1 for the first entry
+//     }
+//   }
+//   console.log(records);
+//   console.log(counts);
+// };
+
+// integerCount([10, 20, 80, 40, 50, 40, 50, 50, 40, 90, 90]);
+
+// // JavaScript program to compute the sum of the absolute differences of consecutive numbers in a given array of integers.
+// const sumOfDifferences = (integers) => {
+//   let sum = 0;
+//   for (let i = 0; i < integers.length - 1; i++) {
+//     sum += Math.abs(integers[i] - integers[i + 1]);
+//   }
+//   console.log(sum);
+// };
+// sumOfDifferences([10,20,30,60,100]);
