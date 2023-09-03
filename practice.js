@@ -321,3 +321,26 @@
 
 // removeRepeatedCharacters("akshayksh");
 
+// // JavaScript program to compare two objects to determine if the first contains equivalent property values to the second one.
+// const propsComparison = (obj1, obj2) => {
+//   let flag = false;
+//   for (let x in obj1) {
+//     if (obj1[x] === obj2[x]) {
+//       flag = true;
+//     } else {
+//       flag = false;
+//       return console.log("objects have different property values");
+//     }
+//   }
+//   return console.log(" objects have similar properties");
+// };
+// propsComparison(
+//   (obj1 = {
+//     name: "xyz",
+//     age: 100,
+//   }),
+//   (obj2 = {
+//     name: "xyz",
+//     age: 100,
+//   })
+// );
