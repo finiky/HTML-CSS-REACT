@@ -3,6 +3,7 @@ import img1 from "./pexels-mali-maeder-101667.jpg"; // images have to be importe
 import img2 from "./pexels-simon-berger-1323550.jpg";
 import { useState, useEffect, useRef } from "react";
 import TestComponent from "./TestComponent";
+import Comp1 from "./Comp1";
 function App() {
   const [value, setValue] = useState(true);
   const x = useRef(null); // to aid in preserving the value upon re-renders.
@@ -45,7 +46,9 @@ function App() {
     );
   }, [x.current]);
   return (
+    
     <div className={styles.main}>
+      <Comp1/>
       {/*Everytime the parent component gets rendered all the child components get rendered*/}
       <TestComponent />
       <ul id="images" className={styles.list}>

@@ -1,7 +1,214 @@
-// Print date and time from the date object
-const date = new Date();
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-console.log(
-  `Current Time is: ${date.toLocaleTimeString()}, Today is: ${days[date.getDay()]}`
-);
+// // JavaScript program to print date and time from the date object
+// const date = new Date();
+// const days = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ];
+// const months = [
+//   "January",
+//   "February",
+//   "March",
+//   "April",
+//   "May",
+//   "June",
+//   "July",
+//   "August",
+//   "September",
+//   "October",
+//   "November",
+//   "December",
+// ];
+// console.log(
+//   `Current Time is: ${date.toLocaleTimeString()}, Today is: ${
+//     days[date.getDay()]
+//   }`
+// );
+// console.log(
+//   `${date.getDate()} - ${months[date.getMonth()]} - ${date.getFullYear()}`
+// );
 
+// // JavaScript program to rotate the string in the right direction.
+// const rotate = (word) => {
+//   let reversedWord = "";
+//   for (let i = word.length - 1, j = 0; i >= 0, j < word.length; i--, j++) {
+//     reversedWord = reversedWord + word[i];
+//   }
+//   console.log(reversedWord);
+// };
+// rotate("ABC");
+
+// //find the extension type of a filename
+// const fileName = "filename.js";
+// const extension = fileName.split(".").pop();
+// console.log(extension);
+
+// // JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
+// const _50Finder = (num1, num2) => {
+//   if (num1 === 50 || num2 === 50 || num1 + num2 === 50) {
+//     console.log(true);
+//   }
+//   else console.log(false);
+// };
+// _50Finder(0, 50);
+
+// // JavaScript program to check whether a given integer is within 20 of 100 or 400
+// const integerRangeFinder = (integer) => {
+//   if (
+//     (integer >= 100 && integer <= 120) ||
+//     (integer >= 400 && integer <= 420)
+//   ) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// };
+// integerRangeFinder(410);
+
+// const stringModifier = (string) => {
+//     if(string[0] === 'P' && string[1] === 'y') {
+//         console.log(string)
+//     }
+//     else {
+//         console.log('Py' + string);
+//     }
+// };
+// stringModifier('pyrate');
+
+// // JavaScript program to remove a character at the specified position in a given string and return the modified string.
+// const charRemover = (string, position) => {
+//   const adjustedPosition = position - 1;
+//   let modifiedString = '';
+//   let flag = false;
+//   for (let i = 0; i < string.length; i++) {
+//     if (i === adjustedPosition) {
+//       flag = true; // position has matched
+//     }
+//     if (!flag) {
+//       modifiedString = modifiedString + string[i];
+//     }
+//     if (flag) {
+//       if (i + 1 === string.length && adjustedPosition === i) {
+//         return console.log(modifiedString);
+//       }
+//       if (i + 1 === string.length) {
+//         return console.log(modifiedString);
+//       }
+//       modifiedString = modifiedString + string[i + 1];
+//     }
+//   }
+//   console.log(modifiedString);
+// };
+// charRemover("script", 1);
+
+// // JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+// const multiple_3_or_7 = (number) => {
+//   if (number % 3 === 0 || number % 7 === 0) {
+//     console.log("Divisible by 3 or 7");
+//   } else {
+//     console.log("Not divisible by 3 or 7");
+//   }
+// };
+// multiple_3_or_7(88);
+
+// // JavaScript program to find the largest of three given integers.
+// const largestInteger = (number1, number2, number3) => {
+//     let largest;
+//     if(number1 >= number2 && number1 >= number3) {
+//         return console.log('Largest Number: ', number1);
+//     }
+//     else if(number2 >= number1 && number2 >= number3) {
+//         return console.log('Largest Number: ', number2)
+//     }
+//     else return console.log('Largest Number: ', number3)
+// };
+// largestInteger(1,2,3);
+
+// //  check whether a specified character exists between the 2nd and 4th positions in a given string.
+// const charDetecter = (string, char) => {
+//   if (string[1] === char || string[3] === char) {
+//     return console.log(true);
+//   } else return console.log(false);
+// };
+// charDetecter('java','b');
+
+// // JavaScript program that checks whether the last digit of three positive integers is the same
+// const lastDigitChecker = (number1, number2, number3) => {
+//   if (number1 % 10 === number2 % 10 && number2 % 10 === number3 % 10) {
+//     return console.log("Similar last digit");
+//   } else {
+//     return console.log("Last digits are not same");
+//   }
+// };
+// lastDigitChecker(21, 31, 41);
+// lastDigitChecker(21, 31, 43);
+// lastDigitChecker(22, 31, 41);
+// lastDigitChecker(20, 30, 10);
+
+// // This is how strings are modified in JavaScript. The array methodifications are not applicaple on strings.
+// let string = "";
+// console.log(string.length, string = string + 'A', string.length);
+
+// // JavaScript program to capitalize the first letter of each word in a given string.
+// const capitalizeFirstLetter = (sentence) => {
+//   let modifiedString = "";
+//   for (let i = 0; i < sentence.length; i++) {
+//     if (i === 0) {
+//       modifiedString = modifiedString + sentence[i].toUpperCase();
+//     } else if (sentence[i] === " ") {
+//       modifiedString = modifiedString + sentence[i];
+//     } else if (sentence[i - 1] === " ") {
+//       modifiedString = modifiedString + sentence[i].toUpperCase();
+//     } else {
+//       modifiedString = modifiedString + sentence[i];
+//     }
+//   }
+//   return console.log(modifiedString);
+// };
+// capitalizeFirstLetter("hi my name is akshay. what is your name?");
+
+// // JavaScript program to convert a given number into hours and minutes.
+// const hours_minutes = (number) => {
+//     if(number > 0 && number < 60) {
+//         return console.log(`${number} minutes`);
+//     }
+//     else {
+//         const hours = parseInt(Math.floor(number/60));
+//         const minutes= number%60;
+//         return console.log(`${hours} hours : ${minutes} minutes`);
+//     }
+// }
+// hours_minutes(179);
+// hours_minutes(29);
+// hours_minutes(61);
+
+// // JavaScript program to extract the first half of a even string.
+// const extract = (string) => {
+//     let modified = "";
+//     for(let i = 0; i < string.length/2; i++) {
+//         modified = modified + string[i];
+//     }
+//     return console.log(modified);
+// }
+// extract("java");
+
+// // JavaScript program to find the maximum difference among all possible pairs of a given array of integers
+// const compareIntegers = (integers) => {
+//   let maxDiff = 0;
+//   for (let i = 0; i < integers.length - 1; i++) {
+//     for (let j = i + 1; j < integers.length; j++) {
+//       if (Math.abs(integers[i] - integers[j]) > maxDiff) {
+//         maxDiff = Math.abs(integers[i] - integers[j]);
+//       }
+//     }
+//   }
+//   console.log(maxDiff);
+// };
+
+// compareIntegers([1,20,551,4,201,800]);
+
+// // JavaScript program to find the number appearing most frequently in a given array of integers.
