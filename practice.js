@@ -284,8 +284,39 @@
 //     }
 //   }
 //   if(number === null) {
-//     return console.log("There is no smallest round number lesser than", limit); 
+//     return console.log("There is no smallest round number lesser than", limit);
 //   }
 //   return console.log("smallest round number is", number);
 // };
 // roundNum([20, 30, 40, 50, 10], 50);
+
+// // JavaScript program to remove all characters from a given string that appear more than once.
+// const removeRepeatedCharacters = (string) => {
+//   console.log("Orignal String: ", string);
+//   let characters = "";
+//   let modifiedString = "";
+//   const countOfCharacter = [];
+//   let foundFlag = false;
+//   for (let i = 0; i < string.length; i++, foundFlag = false) {
+//     for (let j = 0; j < characters.length || j === 0; j++) {
+//       if (string[i] === characters[j]) {
+//         countOfCharacter[j] = countOfCharacter[j] + 1;
+//         foundFlag = true;
+//         j = characters.length; // break the loop
+//       }
+//     }
+//     if (!foundFlag) {
+//       characters += string[i];
+//       countOfCharacter.push(1);
+//     }
+//   }
+
+//   for (let j = 0; j < countOfCharacter.length; j++) {
+//     if (countOfCharacter[j] > 1) {
+//       string = string.replace(new RegExp(characters[j], "gi"), "");
+//     }
+//   }
+//   return console.log("Modified String: ", string);
+// };
+
+// removeRepeatedCharacters("akshayksh");
