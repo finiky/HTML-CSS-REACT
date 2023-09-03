@@ -244,3 +244,48 @@
 //   console.log(sum);
 // };
 // sumOfDifferences([10,20,30,60,100]);
+
+// // JavaScript program to check if a given integer has an increasing digit sequence
+// const checkSequence = (integer) => {
+//   if (typeof intger === NaN) {
+//     return console.log("Invalid Integer");
+//   }
+//   const length = integer.toString().length;
+//   if (length === 1) {
+//     return console.log("Integer should be of multi digits");
+//   } else {
+//     let flag = false;
+//     const int = integer.toString();
+//     for (let i = 0; i < length - 1; i++) {
+//       if (int[i + 1] > int[i]) {
+//         flag = true;
+//       } else {
+//         return console.log(
+//           integer,
+//           " does not have an increasing digit sequence"
+//         );
+//       }
+//     }
+//     return console.log(integer, " has an increasing digit sequence");
+//   }
+// };
+// checkSequence(123459);
+
+// // JavaScript program to find the smallest round number not less than a given value.
+// const roundNum = (numbers, limit) => {
+//   let number = null;
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 10 === 0 && numbers[i] < limit) {
+//       if (number === null) {
+//         number = numbers[i];
+//       } else if (numbers[i] < number) {
+//         number = numbers[i];
+//       }
+//     }
+//   }
+//   if(number === null) {
+//     return console.log("There is no smallest round number lesser than", limit); 
+//   }
+//   return console.log("smallest round number is", number);
+// };
+// roundNum([20, 30, 40, 50, 10], 50);
