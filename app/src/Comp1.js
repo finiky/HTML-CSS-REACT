@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 const Comp1 = () => {
   const [value, setValue] = useState(10);
   console.log("re-render");
@@ -13,4 +13,4 @@ const Comp1 = () => {
     </div>
   );
 };
-export default Comp1;
+export default memo(Comp1);
